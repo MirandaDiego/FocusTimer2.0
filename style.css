@@ -1,0 +1,177 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(194, 5%, 7%);
+    --text-color: hsl(194, 40%, 98%);
+    --primary-color: hsl(194, 100%, 63%);
+    --controls-bg-color: hsl(194, 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    --card-color-primary: #E1E1E6;
+    --car-color-second: #02799D;
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.light {
+    --text-color: hsl(194, 5%, 7%);
+    --bg-color: hsl(194, 40%, 98%);
+    --controls-bg-color: hsl(194, 0%, 14%);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+}
+
+body {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    position: relative;
+
+}
+
+#page {
+    display: flex;
+    gap: 19.2rem;
+    width: 100%;
+    color: var(--controls-bg-color);
+
+}
+
+#timer {
+    text-align: center;
+    font-size: 14.6rem;
+}
+
+#controls {
+    display: flex;
+    text-align: center;
+    gap: 4rem;
+
+}
+
+#controls button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 5.9rem;
+
+}
+
+.class-buttons {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    gap: 3.2rem;
+    margin-top: -5rem;
+
+}
+
+.cards {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    background-color: var(--card-color-primary);
+    width: 13.8rem;
+    height: 15.2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2.4rem;
+    transition: .2s;
+
+}
+
+.cards:hover {
+    transform: scale(1.1);
+}
+
+#floresta {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(floresta.svg);
+}
+
+#chuva {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(chuva.svg);
+
+}
+
+#cafeteria {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url(cafeteria.svg);
+
+}
+
+#fogueira {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-image: url(fogueira.svg);
+
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+
+}
+
+.flex {
+    display: flex;
+
+}
+
+.selecionado {
+
+    background-color: var(--car-color-second);
+
+}
+
+.selecionado svg path {
+    fill: #fff;
+
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
